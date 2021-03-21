@@ -36,14 +36,19 @@ body {
   margin-right: 0.5em;
   margin-left: 0.5em;
 }
-.sitat {
+img.sitat {
+  width: 20%;
+  margin-bottom: -1.1em;
+  padding-left: 0.1em;
+}
+fieldset.sitat {
   border: 2px solid green;
   padding: 1em;
   background: greenyellow;
   margin-bottom: 3em;
 }
 
-.sitat legend {
+fieldset.sitat legend {
   font-size: 1.5em;
 }
 

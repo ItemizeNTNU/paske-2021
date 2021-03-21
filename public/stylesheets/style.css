@@ -1,0 +1,57 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/images/background.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2em;
+}
+.button {
+  background: green;
+  color: white;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.navbar {
+  background: greenyellow;
+}
+.navbar-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  margin-bottom: 3em;
+}
+.navbar-content :is(p, h1, h2, h3) {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+.sitat {
+  border: 2px solid green;
+  padding: 1em;
+  background: greenyellow;
+  margin-bottom: 3em;
+}
+
+.sitat legend {
+  font-size: 1.5em;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

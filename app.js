@@ -33,7 +33,7 @@ app.get('/', function (req, res, next) {
   render(res, 'index', { title: 'Påskehare admin side elns', sitat: 'Hei hei' });
 });
 app.get('/login', function (req, res, next) {
-  render(res, 'login', { title: 'Velkommen!', sitat: 'Ah, jeg har glemt passordet mitt! Kan du logge meg inn?' });
+  render(res, 'login', { title: 'Logg inn', sitat: 'Ah, jeg har glemt passordet mitt! Kan du logge meg inn?' });
 });
 // END ROUTES
 

@@ -30,7 +30,7 @@ const render = async (res, file, options) => {
 
 // BEGIN ROUTES
 app.get('/', function (req, res, next) {
-  render(res, 'index', { title: 'Påskehare admin side', sitat: 'Hei hei! Jeg er påskeharen, og dette er min egne nettside! Her holder jeg kontroll over alt arbeidet jeg må gjøre nå i påsketider.' });
+  render(res, 'index', { title: 'Påskeharens admin-side', sitat: 'Hei hei! Jeg er påskeharen, og dette er min egne nettside! Her holder jeg kontroll over alt arbeidet jeg må gjøre nå i påsketider.' });
 });
 app.get('/login', function (req, res, next) {
   render(res, 'login', { title: 'Log in', sitat: 'Ånei.. Det er så lenge siden sist påske! Jeg har glemt hva passordet mitt er! Kan du hjelpe meg med å logge inn?' });

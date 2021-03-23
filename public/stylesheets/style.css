@@ -60,3 +60,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.loginContainer {
+  color:white;
+  background-color: blue;
+  margin-left: auto;
+}
+

@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #37393A;
+  color: #fffcb0;
   background-image: url('/images/background.png');
   background-position: center center;
   background-size: cover;
@@ -38,13 +38,15 @@ body {
   margin-left: 0.5em;
 }
 img.sitat {
-  width: 20%;
-  margin-bottom: -1.1em;
-  padding-left: 0.1em;
+  width: 15%;
+  margin-bottom: -0.20em;
+  padding-left: 1.4em;
 }
 fieldset.sitat {
+  width: 25%;
   border: 2px solid #73A6AD;
-  padding: 1em;
+  border-radius: 10px;
+  padding: 1.7em 1em 1em 1em;
   background: #73A6AD;
   color: #37393A;
   margin-bottom: 3em;
@@ -52,6 +54,7 @@ fieldset.sitat {
 
 fieldset.sitat legend {
   font-size: 1.5em;
+  margin-bottom: -1.2em;
 }
 
 a {

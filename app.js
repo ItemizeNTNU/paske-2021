@@ -55,6 +55,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/haredata', serveIndex(path.join(__dirname, 'public/haredata'), { 'icons': true }));
+app.use('/images', serveIndex(path.join(__dirname, 'public/images'), { 'icons': true }));
+app.use('/stylesheets', serveIndex(path.join(__dirname, 'public/stylesheets'), { 'icons': true }));
 
 const render = async (res, file, options = {}) => {
   options = { ...options };
@@ -140,7 +142,7 @@ app.post('/panel', (req, res, next) => {
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404));
+  render(res, 'errorPretty', { error: '404 - Fil ikke funnet :/' })
 });
 
 // error handler

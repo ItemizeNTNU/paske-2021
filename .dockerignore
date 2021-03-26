@@ -1,0 +1,6 @@
+.git/
+.gitignore
+node_modules
+*docker*
+Dockerfile
+orig-csv-data

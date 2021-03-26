@@ -1,0 +1,49 @@
+{%title = 'Drift Panel'%}
+{%sitat = `Da gjenstår det kun å sende ut påskeeggene.
+
+Hm... Virker ikke som skjemaet nedenfor ikke fungerer. Kunne du ha fikset det for meg?`%}
+{% include header %}
+
+<form onsubmit="sendForm(); return false" action="/panel?token={%=token%}" method="POST" class="card">
+	<h3>Send ut påskeegg:</h3>
+	{% if (typeof error != 'undefined') { %}
+	<p class="error">{%=error%}</p>
+	{%}%}
+	<label for="bekreft">Send ut påskeegg:</label>
+	<select name="bekreft" id="bekreft" disabled>
+		<option value="nei" selected>Nei</option>
+		<option value="ja">Ja</option>
+	</select>
+	<label for="passord">Passord:</label>
+	<input type="password" name="passord" id="passord">
+	<input type="submit" value="Registrer utsending">
+</form>
+
+<script>
+	function sendForm() {
+		const form = document.forms[0];
+		let bekreft = form.querySelector('#bekreft').value;
+		let passord = form.querySelector('#passord').value;
+
+		bekreft = bekreft == 'ja';
+		if (!bekreft) {
+			alert('neivel da');
+			return;
+		}
+		try {
+			checkPass(passord, 1);
+		} catch (err) {
+			console.error(err);
+		}
+	}
+	function checkPass(pass, form) {
+		if (pass == 'qwerty') {
+			document.forms[form].submit();
+		} else {
+			alert('feil passord');
+		}
+	}
+</script>
+
+
+{% include footer %}

@@ -4,27 +4,27 @@
 <head>
 	<meta charset='utf-8'>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<title>{%=title || 'PåskeCTF'%}</title>
+	<title>{%=typeof title != 'undefined' ? title : 'Påske Drift'%}</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel='stylesheet' type='text/css' media='screen' href='/stylesheets/style.css'>
-	<script src='/javascript/main.js'></script>
 </head>
 
 <body>
 
 	<div class="navbar">
 		<div class="navbar-content">
-			<h3>Påskeharens admin-side</h3>
+			<h3><a href="/">Påske Drift</a></h3>
 			<a href="/login" class="button">Login</a>
 		</div>
 	</div>
+
 	<div class="content">
-			<div class="sitat-content">
-				{% if (typeof sitat != 'undefined') { %}
-				<img class="sitat" src="/images/påskehare.png" alt="Påskeharen">
-				<fieldset class="sitat">
-					<legend>Påskeharen:</legend>
-					<p>{%=sitat%}</p>
-				</fieldset>
-				{% } %}
+		{% if (typeof sitat != 'undefined') { %}
+		<div class="sitat">
+			<img src="/images/påskehare.png" alt="Påskeharen">
+			<div class="card">
+				<h3>Påskeharen:</h3>
+				<p>{%-sitat%}</p>
 			</div>
+		</div>
+		{% } %}

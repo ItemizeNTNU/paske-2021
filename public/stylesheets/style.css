@@ -10,9 +10,11 @@ body {
   min-height: 100vh;
 }
 .content {
-  max-width: 80rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 2em;
+  display: flex;
+  align-items: center;
 }
 .button {
   background: #37393A;
@@ -37,13 +39,18 @@ body {
   margin-right: 0.5em;
   margin-left: 0.5em;
 }
+
+.sitat-content{
+  flex: 1;
+}
+
 img.sitat {
   width: 15%;
   margin-bottom: -0.20em;
   padding-left: 1.4em;
 }
 fieldset.sitat {
-  width: 25%;
+  width: 80%;
   border: 2px solid #73A6AD;
   border-radius: 10px;
   padding: 1.7em 1em 1em 1em;
@@ -67,20 +74,16 @@ a:hover {
 }
 
 .loginContainer {
+  flex: 2;
   color:white;
   width: 40%;
-  margin: auto;
   background-color: #73A6AD;
   text-align: left;
   border-radius: 10px;
   padding: 3em;
+  margin-left: 1em;
 }
-@media screen and (max-width: 600px) {
-  .loginContainer{
-    padding: 2em;
-    width: 90%;
-  }
-}
+
 
 input[type=text], input[type=password] {
   width: 100%;

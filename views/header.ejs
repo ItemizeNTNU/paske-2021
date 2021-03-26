@@ -19,11 +19,12 @@
 		</div>
 	</div>
 	<div class="content">
-
-		{% if (typeof sitat != 'undefined') { %}
-		<img class="sitat" src="/images/påskehare.png" alt="Påskeharen">
-		<fieldset class="sitat">
-			<legend>Påskeharen:</legend>
-			<p>{%=sitat%}</p>
-		</fieldset>
-		{% } %}
+			<div class="sitat-content">
+				{% if (typeof sitat != 'undefined') { %}
+				<img class="sitat" src="/images/påskehare.png" alt="Påskeharen">
+				<fieldset class="sitat">
+					<legend>Påskeharen:</legend>
+					<p>{%=sitat%}</p>
+				</fieldset>
+				{% } %}
+			</div>

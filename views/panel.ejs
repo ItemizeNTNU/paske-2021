@@ -1,5 +1,5 @@
 {%title = 'Drift Panel'%}
-{%sitat = `Jeg trenger å registrere hvor mange egg som ble levert til hver by i fjor. Dette kan jeg vanligvis bare lese av statistikken under, men ser ut som den ikke vil laste inn.
+{%sitat = `Jeg trenger å registrere hvilken by som fikk flest egg i fjor. Dette kan jeg vanligvis bare lese av statistikken under, men ser ut som den ikke vil laste inn.
 
 Jeg tror jeg har noen tabellfiler med statistikken liggende, men husker ikke helt hvor jeg la dem...`%}
 {% include header %}
@@ -9,8 +9,8 @@ Jeg tror jeg har noen tabellfiler med statistikken liggende, men husker ikke hel
 	{% if (typeof error != 'undefined') { %}
 	<p class="error">{%=error%}</p>
 	{%}%}
-	<label for="by">By:</label>
-	<input type="text" name="by" placeholder="by" id="by">
+	<label for="by">By navn:</label>
+	<input type="text" name="by" placeholder="by navn" id="by">
 	<label for="egg">Egg:</label>
 	<input type="number" name="egg" placeholder="0" id="egg">
 	<input type="submit" value="Registrer egg">

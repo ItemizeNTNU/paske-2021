@@ -18,12 +18,14 @@ body {
   min-height: 100vh;
   color: var(--text-light);
   font-weight: 400;
+  position: relative;
 }
 .content {
   max-width: 60rem;
   margin: 0 auto;
   padding: 2em;
   align-items: center;
+  padding-bottom: 3em;
 }
 .navbar {
   background: var(--background);
@@ -36,9 +38,8 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.2em;
-  margin-bottom: 3em;
 }
-.navbar-content :is(p, h1, h2, h3) {
+.navbar-content :is(p, h1, h2, h3, .button) {
   margin-right: 0.5em;
   margin-left: 0.5em;
 }
@@ -115,7 +116,8 @@ form {
 }
 
 .checkpoint {
-  position: fixed;
+  position: absolute;
+  font-size: 0.7em;
   bottom: 0;
   margin: auto;
   background: var(--background);

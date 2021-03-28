@@ -51,6 +51,7 @@ ejs.closeDelimiter = '}';
 
 
 app.use(logger('dev'));
+app.disable('x-powered-by');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

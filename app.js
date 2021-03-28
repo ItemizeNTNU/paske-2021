@@ -10,6 +10,7 @@ const alasql = require('alasql');
 const adminPass = '8665991a2cff1998';
 const panelToken = '161e3db7b94020a9';
 const formPassword = 'qwerty';
+const cookieValue = '7bf10a40d998f0da';
 
 const csv = {
   by: 'kristiansund',
@@ -87,8 +88,8 @@ app.post('/login', (req, res, next) => {
   }
   alasql([`SELECT id FROM users WHERE username='${req.body.username}' AND password='${req.body.password}'`])
     .then(user => {
-      if (user) {
-        res.cookie('auth2020', 'my login cookie');
+      if (user[0][0]) {
+        res.cookie('auth2020', cookieValue);
         res.redirect('/panel');
       } else {
         render(res, 'login', { error: `Invalid username or password` });
@@ -103,6 +104,10 @@ app.get('/panel', (req, res, next) => {
   if (req.query.token != panelToken) {
     if (!req.cookies.auth2021) {
       render(res, 'errorPretty', { error: `Missing cookie 'auth2021'`, flagg: flagg[1] });
+      return;
+    }
+    if (req.cookies.auth2021 != cookieValue) {
+      render(res, 'errorPretty', { error: `Incorrect auth cookie`, flagg: flagg[1] });
       return;
     }
     render(res, 'panel', { flagg: flagg[2] });

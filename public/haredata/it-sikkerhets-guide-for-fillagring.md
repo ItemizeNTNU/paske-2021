@@ -4,7 +4,7 @@ Alle filer skal bli kryptert med AES-256-CBC eller sterkere. Vi bruker OpenSSL s
 
 For å kryptere en fil bruk følgende kommando:
 ```bash
-openssl aes-256-cbc -in original.fil -out original.fil.kryptert
+openssl aes-256-cbc -md sha512 -in original.fil -out original.fil.kryptert
 ```
 Du vil å bli spurt om passord, e.g. `PåskeDrift Passord!`
 
@@ -12,7 +12,7 @@ Du vil å bli spurt om passord, e.g. `PåskeDrift Passord!`
 
 For dekryptering, kjør tilsvarende kommando:
 ```bash
-openssl aes-256-cbc -in original.fil.kryptert -out original.fil -d
+openssl aes-256-cbc -md sha512 -in original.fil.kryptert -out original.fil -d
 ```
 Skriv så det samme passordet du brukte for å kryptere filen.
 

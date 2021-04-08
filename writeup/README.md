@@ -1,11 +1,11 @@
 # Eggs:
-* [Egg 0](#Egg%200)
-* [Egg 1](#Egg%201)
-* [Egg 2](#Egg%202)
-* [Egg 3](#Egg%203)
-* [Egg 4](#Egg%204)
-* [Egg 5](#Egg%205)
-* [Egg 6](#Egg%206)
+* [Egg 0](#egg-0)
+* [Egg 1](#egg-1)
+* [Egg 2](#egg-2)
+* [Egg 3](#egg-3)
+* [Egg 4](#egg-4)
+* [Egg 5](#egg-5)
+* [Egg 6](#egg-6)
 
 # Egg 0
 We start at https://påske.itemize.no/, here we get the first egg for free at the bottom of the page.

@@ -1,3 +1,6 @@
+# Writeup:
+See [/writeup](/writeup)
+
 # Setup:
 ## Initial install
 ```bash
